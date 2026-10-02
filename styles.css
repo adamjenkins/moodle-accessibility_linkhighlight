@@ -21,5 +21,6 @@ along with Moodle.  If not, see <https://www.gnu.org/licenses/>. */
  */
 
 body.accessibility-linkhighlight-enabled a {
+    /* stylelint-disable-next-line declaration-no-important -- accessibility override must beat theme styles. */
     border: 2px solid #0f6cbf !important;
 }

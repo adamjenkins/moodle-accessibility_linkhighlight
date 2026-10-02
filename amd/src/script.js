@@ -22,7 +22,7 @@
  */
 
 import $ from 'jquery';
-import { saveWidgetConfig } from 'local_accessibility/common';
+import {saveWidgetConfig} from 'local_accessibility/common';
 
 /**
  * Initialisation
@@ -44,7 +44,9 @@ export const init = (data) => {
         let userdata = data;
 
         const updatebtn = () => {
-            $btn.html(userdata ? M.str.accessibility_linkhighlight.enabled : M.str.accessibility_linkhighlight.disabled);
+            $btn.html(userdata
+                ? M.util.get_string('enabled', 'accessibility_linkhighlight')
+                : M.util.get_string('disabled', 'accessibility_linkhighlight'));
             $btn.removeClass('btn-primary');
             $btn.removeClass('btn-light');
             $btn.addClass(userdata ? 'btn-primary' : 'btn-light');
